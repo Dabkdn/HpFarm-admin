@@ -7,3 +7,7 @@ export const getParentCategoryWithChildAPI = () => {
 export const getCategoriesAPI = () => {
     return request().get(`/api/categories`)
 }
+
+export const addCategoryAPI = (data) => {
+    return request().post(`/api/category`, data)
+}

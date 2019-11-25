@@ -1,10 +1,12 @@
 import {
     GET_PARENT_CATEGORY_WITH_CHILDS,
-    GET_CATEGORIES
+    GET_CATEGORIES,
+    ADD_CATEGORY
 } from "./actionType";
 const INITIAL_STATE = {
     parentCategories: [],
-    categories: []
+    categories: [],
+    category: {}
 };
 export default (state = INITIAL_STATE, { type, payload }) => {
     switch (type) {
@@ -18,6 +20,12 @@ export default (state = INITIAL_STATE, { type, payload }) => {
             return {
                 ...state,
                 categories: payload
+            }
+        }
+        case ADD_CATEGORY: {
+            return {
+                ...state,
+                category: payload
             }
         }
         default: return state;

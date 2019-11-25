@@ -15,7 +15,7 @@ class Home extends React.Component {
     return (
         <MasterLayout>
           <div className="container">
-            <div className="home">
+            <div className="home" style={{height: "100vh"}}>
               this is Homepage
             </div>
           </div>

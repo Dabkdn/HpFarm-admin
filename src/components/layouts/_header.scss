@@ -1,6 +1,9 @@
 @import "public/assets/css/index";
 
 .Header {
+  -webkit-box-shadow: 5px 5px 16px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 16px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 16px -6px rgba(0, 0, 0, 0.75);
   -webkit-transition: all 1s;
   transition: all 1s;
   position: fixed;

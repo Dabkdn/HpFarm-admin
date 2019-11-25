@@ -1,4 +1,5 @@
 export { default as CustomDropDown } from './CustomDropDown'
 export { default as CustomCollapse } from './CustomCollapse'
 export { default as UploadImage } from './UploadImage'
+export { default as Select } from './Select'
 export * from './layouts'

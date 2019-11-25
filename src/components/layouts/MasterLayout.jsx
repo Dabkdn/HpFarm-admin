@@ -45,6 +45,16 @@ class MasterLayout extends React.Component {
                 link: "/add-user"
             },
         ]
+        const categoryCollapse = [
+            {
+                name: "View",
+                link: "/categories"
+            },
+            {
+                name: "Add",
+                link: "/add-category"
+            },
+        ]
         return (
             <div style={{ marginTop: "100px" }}>
                 <div id="mySidenav" className="sidenav">
@@ -54,7 +64,7 @@ class MasterLayout extends React.Component {
                     }
                     <CustomCollapse name="User" data={userCollapse} />
 
-                    <CustomCollapse name="Category" data={[]} />
+                    <CustomCollapse name="Category" data={categoryCollapse} />
                 </div>
 
                 <div id="main">

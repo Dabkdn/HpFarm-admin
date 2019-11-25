@@ -1,6 +1,7 @@
 import {
   GET_PARENT_CATEGORY_WITH_CHILDS,
-  GET_CATEGORIES
+  GET_CATEGORIES,
+  ADD_CATEGORY
 }
   from './actionType'
 
@@ -16,6 +17,11 @@ export const getParentCategoryWithChildAction = (payload) => ({
 
 export const getCategoriesAction = (payload) => ({
   type: GET_CATEGORIES,
+  payload
+})
+
+export const addCategoryAction = (payload) => ({
+  type: ADD_CATEGORY,
   payload
 })
 
@@ -41,6 +47,21 @@ export const getCategories = () => {
       })
       .catch(error => {
         console.log("Error  ", error);
+      })
+  }
+}
+
+export const addCategory = (data, succ = () => {}, err = () => {}) => {
+
+  return (dispatch) => {
+    categoryAPI.addCategoryAPI(data)
+      .then(res => {
+        res.data && dispatch(addCategoryAction(res.data))
+        succ(res.data)
+      })
+      .catch(error => {
+        console.log("Error  ", error);
+        err(error)
       })
   }
 }
