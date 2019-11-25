@@ -37,20 +37,20 @@ class MasterLayout extends React.Component {
     render() {
         const userCollapse = [
             {
-                name: "List User",
-                link: "/404"
+                name: "View",
+                link: "/users"
             },
             {
-                name: "Add User",
-                link: "/404"
+                name: "Add",
+                link: "/add-user"
             },
         ]
         return (
             <div style={{ marginTop: "100px" }}>
                 <div id="mySidenav" className="sidenav">
                     {
-                        this.state.isLeftSideOpen ? <a href="javascript:void(0)" className="closebtn" onClick={this.toggleLeftSide}>&#10094;</a>
-                            : <a className="closebtn" onClick={this.toggleLeftSide}>&#10095;</a>
+                        this.state.isLeftSideOpen ? <a style={{color: "#ffffff"}} className="closebtn" onClick={this.toggleLeftSide}>&#10094;</a>
+                            : <a style={{color: "#ffffff"}} className="closebtn" onClick={this.toggleLeftSide}>&#10095;</a>
                     }
                     <CustomCollapse name="User" data={userCollapse} />
 

@@ -2,7 +2,8 @@ import {
     ADD_USER,
     GET_ME,
     UPDATE_USER,
-    GET_USERS
+    GET_USERS,
+    GET_USER
 } from "./actionType";
 const INITIAL_STATE = {
     user: {},
@@ -33,6 +34,12 @@ export default (state = INITIAL_STATE, { type, payload }) => {
             return {
                 ...state,
                 users: payload
+            }
+        }
+        case GET_USER: {
+            return {
+                ...state,
+                user: payload
             }
         }
         default: return state;

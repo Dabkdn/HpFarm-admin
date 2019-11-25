@@ -2,7 +2,8 @@ import {
   ADD_USER,
   GET_ME,
   UPDATE_USER,
-  GET_USERS
+  GET_USERS,
+  GET_USER
 }
   from './actionType'
 
@@ -28,6 +29,11 @@ export const updateUserAction = (payload) => ({
 
 export const getUsersAction = (payload) => ({
   type: GET_USERS,
+  payload
+})
+
+export const getUserAction = (payload) => ({
+  type: GET_USER,
   payload
 })
 
@@ -61,7 +67,22 @@ export const getMe = (succ, err) => {
   }
 }
 
-export const updateUser = (data, succ, fail) => {
+export const getUser = (id, succ = ()=>{}, err = ()=>{}) => {
+
+  return (dispatch) => {
+    userAPI.getUserAPI(id)
+      .then(res => {
+        res.data && dispatch(getUserAction(res.data))
+        succ(res.data)
+      })
+      .catch(error => {
+        console.log("Error  ", error);
+        err(error)
+      })
+  }
+}
+
+export const updateUser = (data, succ = ()=>{}, fail = ()=>{}) => {
   return (dispatch) => {
     userAPI.updateUserAPI(data)
       .then(res => {

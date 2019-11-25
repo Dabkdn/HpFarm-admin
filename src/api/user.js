@@ -15,3 +15,7 @@ export const updateUserAPI = (data) => {
 export const getUsersAPI = () => {
     return request().get(`/api/users`)
 }
+
+export const getUserAPI = (id) => {
+    return request().get(`/api/user?id=${id}`)
+}
