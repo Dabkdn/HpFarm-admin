@@ -1,11 +1,13 @@
 import {
     ADD_USER,
     GET_ME,
-    UPDATE_USER
+    UPDATE_USER,
+    GET_USERS
 } from "./actionType";
 const INITIAL_STATE = {
     user: {},
-    me: {}
+    me: {},
+    users: []
 };
 export default (state = INITIAL_STATE, { type, payload }) => {
     switch (type) {
@@ -25,6 +27,12 @@ export default (state = INITIAL_STATE, { type, payload }) => {
             return {
                 ...state,
                 user: payload
+            }
+        }
+        case GET_USERS: {
+            return {
+                ...state,
+                users: payload
             }
         }
         default: return state;

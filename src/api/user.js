@@ -11,3 +11,7 @@ export const getMeAPI = () => {
 export const updateUserAPI = (data) => {
     return request().put(`/api/user`, data)
 }
+
+export const getUsersAPI = () => {
+    return request().get(`/api/users`)
+}

@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 // pages
 import Home from 'features/home';
+import { User } from 'features/user'
 import { NotFound } from 'features/notFound'
 
 const Routers = () => {
@@ -10,6 +11,7 @@ const Routers = () => {
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/home' component={Home} />
+      <Route exact path='/user' component={User} />
       <Route path='*' component={NotFound} />
     </Switch>
   )

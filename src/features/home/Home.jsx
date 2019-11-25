@@ -13,11 +13,13 @@ class Home extends React.Component {
   render() {
 
     return (
-      <div>
         <MasterLayout>
-          <div>this is Homepage</div>
+          <div className="container">
+            <div className="home">
+              this is Homepage
+            </div>
+          </div>
         </MasterLayout>
-      </div>
     );
   }
 }

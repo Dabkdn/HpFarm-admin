@@ -1,15 +1,6 @@
 import React from "react"
 import './_header.scss'
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink
-} from 'reactstrap'
 import { Link } from 'react-router-dom'
-import CustomDropDown from '../CustomDropDown'
 
 
 class Header extends React.Component {
@@ -36,23 +27,7 @@ class Header extends React.Component {
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-light bg-none">
             <Link to="/" className="navbar-brand">HpFarm</Link>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink href="/">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/products">Products</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/shipment">Shipment</NavLink>
-                </NavItem>
-                <NavItem>
-                  <CustomDropDown isHeaderMenu={true} />
-                </NavItem>
-              </Nav>
-            </Collapse>
+            
           </nav>
         </div>
       </div>
