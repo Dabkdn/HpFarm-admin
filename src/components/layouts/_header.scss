@@ -1,0 +1,46 @@
+@import "public/assets/css/index";
+
+.Header {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: #ffffff;
+  .logo {
+    display: inline-block;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .navbar-brand {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    color: $color_common_orange !important;
+  }
+  .nav-link {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    color: $color_common_orange !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Header {
+    text-align: center;
+    .mobile-menu {
+      display: unset;
+    }
+    .logo {
+      display: block;
+      text-align: center;
+    }
+    .logo-full {
+      margin-left: 35px;
+    }
+  }
+  .navbar-collapse {
+    background: rgb(207, 198, 191);
+    padding: 10px;
+    border-radius: 6px;
+  }
+}

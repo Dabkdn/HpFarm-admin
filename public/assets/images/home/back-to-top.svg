@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="14px" viewBox="0 0 25 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>back-to-top</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Vitrade-Ver-2" transform="translate(-1363.000000, -2573.000000)" fill="#7C3A19">
+            <g id="Group-21" transform="translate(0.000000, 2397.000000)">
+                <g id="Group" transform="translate(1345.000000, 153.000000)">
+                    <path d="M40.1473003,23.6256059 L30.4999998,33.0183102 L20.8526993,23.6256059 C20.0919765,22.8088425 19.3312649,22.7918278 18.5705421,23.5745554 C17.8098193,24.3572894 17.8098193,25.1229892 18.5705421,25.8716874 L29.3589212,36.4895269 C29.6355485,36.829844 30.0159036,37 30.4999998,37 C30.9840959,37 31.364451,36.829844 31.6410783,36.4895269 L42.4294574,25.8716874 C43.1901809,25.1229892 43.1901809,24.3572894 42.4294574,23.5745554 C41.6687339,22.7918278 40.9080238,22.8088425 40.1473003,23.6256059 Z" id="back-to-top" transform="translate(30.500000, 30.000000) scale(1, -1) translate(-30.500000, -30.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

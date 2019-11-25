@@ -1,0 +1,101 @@
+@import "public/assets/css/index";
+.Footer {
+  width: 100%;
+  padding: 84px 117px 68px 117px;
+  background-image: linear-gradient(157deg, $color_dark_blue, $color_common_orange);
+  h3 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  p {
+    margin: 36px 0;
+    opacity: 0.75;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  .google-play {
+    width: 134.5px;
+    margin-top: 140px;
+  }
+  .app-store {
+    width: 132.5px;
+    margin-top: 44px;
+  }
+  .google-play-1 {
+    display: none;
+  }
+  .app-store-1 {
+    display: none;
+  }
+  .instagram {
+    margin-left: 44px;
+  }
+}
+@media only screen and (max-width: 1135px) {
+  .Footer {
+    padding: 72.4px 78px 87px 78px;
+    .google-play-1 {
+      display: none;
+    }
+    .app-store-1 {
+      display: none;
+    }
+    .footer-img-logo {
+      margin-bottom: 88px;
+    }
+    .col-lg-8{
+      max-width: 100%;
+      flex: unset;
+    }
+    .col-lg-4{
+      max-width: 100%;
+      flex: unset;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Footer {
+    padding: 0;
+    text-align: center;
+    .footer-img-logo {
+      margin: 45px 0;
+    }
+    p {
+      margin: 22px 0;
+    }
+    .google-play {
+      display: none;
+    }
+    .app-store {
+      display: none;
+    }
+    .google-play-1 {
+      display: unset;
+      width: 134.5px;
+      margin-bottom: 50px;
+    }
+    .app-store-1 {
+      display: unset;
+      width: 132.5px;
+      margin: 50px 0px 30px 0;
+    }
+    .instagram {
+      margin: 0 20px;
+    }
+    .facebook {
+      margin: 0 20px;
+    }
+  }
+}

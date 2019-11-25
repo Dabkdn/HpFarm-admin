@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'NewsCycle-Regular';
+  src: url('NewsCycle-Regular.eot');
+  src: url('NewsCycle-Regular.eot?#iefix') format('embedded-opentype'),
+       url('NewsCycle-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NewsCycle';
+  src: url('NewsCycle.svg#NewsCycle') format('svg'),
+       url('NewsCycle.ttf') format('truetype'),
+       url('NewsCycle.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
