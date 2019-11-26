@@ -56,7 +56,7 @@ class MasterLayout extends React.Component {
             },
         ]
         return (
-            <div style={{ marginTop: "100px" }}>
+            <div style={{ marginTop: "56px" }}>
                 <div id="mySidenav" className="sidenav">
                     {
                         this.state.isLeftSideOpen ? <a style={{color: "#ffffff"}} className="closebtn" onClick={this.toggleLeftSide}>&#10094;</a>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
+import { HomeBanner } from './sub-view'
 class Home extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -13,13 +14,9 @@ class Home extends React.Component {
   render() {
 
     return (
-        <MasterLayout>
-          <div className="container">
-            <div className="home" style={{height: "100vh"}}>
-              this is Homepage
-            </div>
-          </div>
-        </MasterLayout>
+      <MasterLayout>
+        <HomeBanner />
+      </MasterLayout>
     );
   }
 }
