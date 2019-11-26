@@ -58,7 +58,7 @@ class User extends React.Component {
                         return (
                             <div className="status">
                                 <input type="checkbox" name="status" value={prop.original._id} checked={this.state[prop.original._id]}></input>
-                                <span class="checkmark" onClick={() => {this.onStatusChange(prop.original._id)}}></span>
+                                <span class="checkmark" onClick={() => { this.onStatusChange(prop.original._id) }}></span>
                             </div>
                         )
                     }
@@ -68,9 +68,14 @@ class User extends React.Component {
                 Header: 'User Name',
                 accessor: 'username',
                 Cell: prop => {
-                    return (
-                        <a href={"/user/" + prop.original._id}>{prop.value}</a>
-                    )
+                    if (prop.original.role.name === 'admin') {
+                        return prop.value
+                    }
+                    else {
+                        return (
+                            <a href={"/user/" + prop.original._id}>{prop.value}</a>
+                        )
+                    }
                 }
             },
             {
@@ -118,6 +123,7 @@ class User extends React.Component {
             <MasterLayout>
                 <div className="container">
                     <div className="user">
+                        <h1>User</h1>
                         <a href="/add-user">&#10010;</a>
                         <ReactTable
                             data={data}

@@ -55,16 +55,27 @@ class MasterLayout extends React.Component {
                 link: "/add-category"
             },
         ]
+        const currencyUnitCollapse = [
+            {
+                name: "View",
+                link: "/currencies"
+            },
+            {
+                name: "Add",
+                link: "/add-currency"
+            },
+        ]
         return (
             <div style={{ marginTop: "56px" }}>
                 <div id="mySidenav" className="sidenav">
                     {
-                        this.state.isLeftSideOpen ? <a style={{color: "#ffffff"}} className="closebtn" onClick={this.toggleLeftSide}>&#10094;</a>
-                            : <a style={{color: "#ffffff"}} className="closebtn" onClick={this.toggleLeftSide}>&#10095;</a>
+                        this.state.isLeftSideOpen ? <a style={{ color: "#ffffff" }} className="closebtn" onClick={this.toggleLeftSide}>&#10094;</a>
+                            : <a style={{ color: "#ffffff" }} className="closebtn" onClick={this.toggleLeftSide}>&#10095;</a>
                     }
                     <CustomCollapse name="User" data={userCollapse} />
 
                     <CustomCollapse name="Category" data={categoryCollapse} />
+                    <CustomCollapse name="Currency" data={currencyUnitCollapse} />
                 </div>
 
                 <div id="main">

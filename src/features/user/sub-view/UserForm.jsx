@@ -139,7 +139,8 @@ class UserForm extends React.Component {
             <div className="user-form">
                 <form onSubmit={this.handleSubmit} className="register-form">
                     {
-                        this.props.type === "add" ? <h1>Register</h1> : <h1>Update</h1>
+                        this.props.type === "add" ? <h1><a href="/users"><span className="back">&#10154;</span></a> Add User</h1> : 
+                        <h1><a href="/users"><span className="back">&#10154;</span></a> Update User</h1>
                     }
                     <div className="form-row">
                         <div className="form-group col-md-6">

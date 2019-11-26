@@ -23,11 +23,12 @@ class CustomCollapse extends React.Component {
                     {
                         data && data.map((item, index) => {
                             return (
-                                <a key={index} href={item.link} style={{paddingLeft: "40px"}}>{item.name}</a>
+                                <a key={index} href={item.link} style={{ paddingLeft: "40px" }}>{item.name}</a>
                             )
                         })
                     }
                 </Collapse>
+                <div style={{ width: "136px", height: "2px", backgroundColor: "rgba(0,0,0,0.1)", marginLeft: "32px" }}></div>
             </div>
         );
     }

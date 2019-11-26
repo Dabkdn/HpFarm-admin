@@ -8,8 +8,12 @@ export default class Select extends React.Component {
         }
     }
 
-    componentDidMount() {
-        
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.selected) {
+            this.setState({
+                selectedValue: nextProps.selected
+            })
+        }
     }
 
     handleSelect = (event) => {

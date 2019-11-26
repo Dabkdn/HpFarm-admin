@@ -18,7 +18,7 @@ const request = (options) => {
   // modify headers
   // instance.defaults.headers.common['Authorization'] = "";
   return axios.create({
-    baseURL: 'http://localhost:9000',
+    baseURL: process.env.REACT_APP_SERVER_URL,
     timeout: 20000,
     headers: {
       'content-type': 'application/json',

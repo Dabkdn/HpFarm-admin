@@ -1,7 +1,9 @@
 import {
   GET_PARENT_CATEGORY_WITH_CHILDS,
   GET_CATEGORIES,
-  ADD_CATEGORY
+  ADD_CATEGORY,
+  GET_CATEGORY,
+  UPDATE_CATEGORY
 }
   from './actionType'
 
@@ -25,8 +27,17 @@ export const addCategoryAction = (payload) => ({
   payload
 })
 
-export const getParentCategoryWithChild = () => {
+export const getCategoryAction = (payload) => ({
+  type: GET_CATEGORY,
+  payload
+})
 
+export const updateCategoryAction = (payload) => ({
+  type: UPDATE_CATEGORY,
+  payload
+})
+
+export const getParentCategoryWithChild = () => {
   return (dispatch) => {
     categoryAPI.getParentCategoryWithChildAPI()
       .then(res => {
@@ -39,7 +50,6 @@ export const getParentCategoryWithChild = () => {
 }
 
 export const getCategories = () => {
-
   return (dispatch) => {
     categoryAPI.getCategoriesAPI()
       .then(res => {
@@ -52,11 +62,38 @@ export const getCategories = () => {
 }
 
 export const addCategory = (data, succ = () => {}, err = () => {}) => {
-
   return (dispatch) => {
     categoryAPI.addCategoryAPI(data)
       .then(res => {
         res.data && dispatch(addCategoryAction(res.data))
+        succ(res.data)
+      })
+      .catch(error => {
+        console.log("Error  ", error);
+        err(error)
+      })
+  }
+}
+
+export const getCategory = (id, succ = () => {}, err = () => {}) => {
+  return (dispatch) => {
+    categoryAPI.getCategoryAPI(id)
+      .then(res => {
+        res.data && dispatch(getCategoryAction(res.data))
+        succ(res.data)
+      })
+      .catch(error => {
+        console.log("Error  ", error);
+        err(error)
+      })
+  }
+}
+
+export const updateCategory = (data, succ = () => {}, err = () => {}) => {
+  return (dispatch) => {
+    categoryAPI.updateCategoryAPI(data)
+      .then(res => {
+        res.data && dispatch(updateCategoryAction(res.data))
         succ(res.data)
       })
       .catch(error => {

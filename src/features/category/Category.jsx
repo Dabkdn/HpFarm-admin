@@ -55,6 +55,7 @@ class Category extends React.Component {
             <MasterLayout>
                 <div className="container">
                     <div className="category">
+                        <h1>Category</h1>
                         <a href="/add-category">&#10010;</a>
                         <ReactTable
                             data={data}

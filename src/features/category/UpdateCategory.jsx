@@ -3,25 +3,23 @@ import { connect } from 'react-redux'
 import { CategoryForm } from './sub-view'
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
-import { getUser } from 'redux/reducers/user'
+import { getCategory } from 'redux/reducers/category'
 
-class UpdateUser extends React.Component {
+class UpdateCategory extends React.Component {
     constructor(props) {
         super(props)
     }
 
     componentDidMount() {
-        const userId = this.props.match.params.id
-        console.log(userId)
-        this.props.getUser(userId)
+        const categoryId = this.props.match.params.id
+        this.props.getCategory(categoryId)
     }
 
     render() {
-        console.log(this.props.user)
         return (
             <MasterLayout>
                 <div className="container" style={{height: "100vh"}}>
-                    <CategoryForm type="update" data={this.props.user}/>
+                    <CategoryForm type="update" data={this.props.category}/>
                 </div>
             </MasterLayout>
         )
@@ -30,11 +28,11 @@ class UpdateUser extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.user.user
+        category: state.category.category
     }
 }
 
 const mapDispatchToProps = {
-    getUser
+    getCategory
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UpdateUser))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UpdateCategory))

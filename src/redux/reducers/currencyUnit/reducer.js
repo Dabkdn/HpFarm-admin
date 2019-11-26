@@ -1,6 +1,7 @@
 import {
     ADD_CURRENCY_UNIT,
-    GET_CURRENCY_UNITS
+    GET_CURRENCY_UNITS,
+    GET_CURRENCY_UNIT
 } from "./actionType";
 const INITIAL_STATE = {
     currencyUnit: {},
@@ -18,6 +19,12 @@ export default (state = INITIAL_STATE, { type, payload }) => {
             return {
                 ...state,
                 currencyUnits: payload
+            }
+        }
+        case GET_CURRENCY_UNIT: {
+            return {
+                ...state,
+                currencyUnit: payload
             }
         }
         default: return state;

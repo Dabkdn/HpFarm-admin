@@ -1,9 +1,9 @@
 import React from 'react'
-import { CategoryForm } from './sub-view'
+import { CurrencyUnitForm } from './sub-view'
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 
-class AddCategory extends React.Component {
+class AddCurrencyUnit extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -12,11 +12,11 @@ class AddCategory extends React.Component {
         return (
             <MasterLayout>
                 <div className="container" style={{height: "100vh"}}>
-                    <CategoryForm type="add"/>
+                    <CurrencyUnitForm type="add"/>
                 </div>
             </MasterLayout>
         )
     }
 }
 
-export default withRouter(AddCategory)
+export default withRouter(AddCurrencyUnit)

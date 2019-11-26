@@ -11,3 +11,11 @@ export const getCategoriesAPI = () => {
 export const addCategoryAPI = (data) => {
     return request().post(`/api/category`, data)
 }
+
+export const getCategoryAPI = (id) => {
+    return request().get(`/api/category?id=${id}`)
+}
+
+export const updateCategoryAPI = (data) => {
+    return request().put(`/api/category`, data)
+}
