@@ -45,6 +45,16 @@ class MasterLayout extends React.Component {
                 link: "/add-user"
             },
         ]
+        const faqCollapse = [
+            {
+                name: "View",
+                link: "/faqs"
+            },
+            {
+                name: "Add",
+                link: "/add-faq"
+            },
+        ]
         const categoryCollapse = [
             {
                 name: "View",
@@ -76,6 +86,7 @@ class MasterLayout extends React.Component {
 
                     <CustomCollapse name="Category" data={categoryCollapse} />
                     <CustomCollapse name="Currency" data={currencyUnitCollapse} />
+                    <CustomCollapse name="FAQ" data={faqCollapse} />
                 </div>
 
                 <div id="main">

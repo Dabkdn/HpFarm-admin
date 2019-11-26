@@ -18,17 +18,17 @@ class CustomCollapse extends React.Component {
         const data = this.props.data
         return (
             <div>
-                <a href="javascript:void(0)" onClick={this.toggle}>{this.props.name}</a>
+                <a href="javascript:void(0)" onClick={this.toggle}><span>&#10140;</span> {this.props.name}</a>
                 <Collapse isOpen={this.state.isOpen}>
                     {
                         data && data.map((item, index) => {
                             return (
-                                <a key={index} href={item.link} style={{ paddingLeft: "40px" }}>{item.name}</a>
+                                <a key={index} href={item.link} style={{ paddingLeft: "80px" }}>{item.name}</a>
                             )
                         })
                     }
                 </Collapse>
-                <div style={{ width: "136px", height: "2px", backgroundColor: "rgba(0,0,0,0.1)", marginLeft: "32px" }}></div>
+                <div style={{ width: "136px", height: "2px", backgroundColor: "#ffffff", marginLeft: "32px" }}></div>
             </div>
         );
     }
