@@ -75,6 +75,12 @@ class MasterLayout extends React.Component {
                 link: "/add-currency"
             },
         ]
+        const tokenCollapse = [
+            {
+                name: "View",
+                link: "/tokens"
+            },
+        ]
         return (
             <div style={{ marginTop: "56px" }}>
                 <div id="mySidenav" className="sidenav">
@@ -87,6 +93,8 @@ class MasterLayout extends React.Component {
                     <CustomCollapse name="Category" data={categoryCollapse} />
                     <CustomCollapse name="Currency" data={currencyUnitCollapse} />
                     <CustomCollapse name="FAQ" data={faqCollapse} />
+
+                    <CustomCollapse name="Token" data={tokenCollapse} />
                 </div>
 
                 <div id="main">

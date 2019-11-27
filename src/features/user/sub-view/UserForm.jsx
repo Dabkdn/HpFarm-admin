@@ -92,7 +92,6 @@ class UserForm extends React.Component {
                 address: this.state.address,
                 phone: this.state.phone
             }
-            console.log(JSON.stringify(userData,0,2))
             this.props.updateUser(userData, (data) => {
                 toastr.success('Success!', 'Please wait a moment!');
                 this.props.history.push('/users')

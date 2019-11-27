@@ -6,6 +6,7 @@ import * as productAPI from './product'
 import * as currencyUnitAPI from './currencyUnit'
 import * as auctionAPI from './auction'
 import * as faqAPI from './faq'
+import * as tokenAPI from './token'
 export {
     countAPI,
     categoryAPI,
@@ -14,5 +15,6 @@ export {
     productAPI,
     currencyUnitAPI,
     auctionAPI,
-    faqAPI
+    faqAPI,
+    tokenAPI
 }

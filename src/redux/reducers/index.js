@@ -8,7 +8,8 @@ import product from './product/reducer'
 import currencyUnit from './currencyUnit/reducer'
 import auction from './auction/reducer'
 import faq from './faq/reducer'
-import {reducer as toastrReducer} from 'react-redux-toastr'
+import token from './token/reducer'
+import { reducer as toastrReducer } from 'react-redux-toastr'
 export default combineReducers({
     temp,
     count,
@@ -19,5 +20,6 @@ export default combineReducers({
     currencyUnit,
     auction,
     faq,
+    token,
     toastr: toastrReducer
 });

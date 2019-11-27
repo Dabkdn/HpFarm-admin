@@ -7,6 +7,7 @@ import { User, AddUser, UpdateUser } from 'features/user'
 import { Category, AddCategory, UpdateCategory } from 'features/category'
 import { CurrencyUnit, AddCurrencyUnit, UpdateCurrencyUnit } from 'features/currencyUnit'
 import { Faq, AddFaq, UpdateFaq } from 'features/faq'
+import { Token } from 'features/token'
 import { NotFound } from 'features/notFound'
 
 const Routers = () => {
@@ -30,6 +31,8 @@ const Routers = () => {
       <Route exact path='/faqs' component={Faq} />
       <Route exact path='/add-faq' component={AddFaq} />
       <Route exact path='/faq/:id' component={UpdateFaq} />
+
+      <Route exact path='/tokens' component={Token} />
 
       <Route path='*' component={NotFound} />
     </Switch>

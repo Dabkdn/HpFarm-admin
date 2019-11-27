@@ -57,8 +57,8 @@ class User extends React.Component {
                     else {
                         return (
                             <div className="status">
-                                <input type="checkbox" name="status" value={prop.original._id} checked={this.state[prop.original._id]}></input>
-                                <span class="checkmark" onClick={() => { this.onStatusChange(prop.original._id) }}></span>
+                                <input type="checkbox" name="status" onChange={() => {this.onStatusChange(prop.original._id)}} value={prop.original._id} checked={this.state[prop.original._id]}></input>
+                                <span className="checkmark" onClick={() => { this.onStatusChange(prop.original._id) }}></span>
                             </div>
                         )
                     }

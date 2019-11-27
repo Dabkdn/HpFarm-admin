@@ -12,12 +12,10 @@ class UpdateUser extends React.Component {
 
     componentDidMount() {
         const userId = this.props.match.params.id
-        console.log(userId)
         this.props.getUser(userId)
     }
 
     render() {
-        console.log(this.props.user)
         return (
             <MasterLayout>
                 <div className="container">

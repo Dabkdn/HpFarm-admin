@@ -71,7 +71,6 @@ class FaqForm extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div className="faq-form">
                 <form onSubmit={this.handleSubmit}>
