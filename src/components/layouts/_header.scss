@@ -29,6 +29,15 @@
     color: $color_common_orange !important;
   }
 }
+.avatar {
+  width: 20px;
+  height: 20px;
+  margin-top: -3px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .Header {
     text-align: center;
@@ -44,7 +53,6 @@
     }
   }
   .navbar-collapse {
-    background: rgb(207, 198, 191);
     padding: 10px;
     border-radius: 6px;
   }

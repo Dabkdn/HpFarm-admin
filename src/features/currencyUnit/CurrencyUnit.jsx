@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { connect } from 'react-redux'
 import { getCurrencyUnits } from 'redux/reducers/currencyUnit'
+import { pageTitle } from 'constants/index'
 
 class CurrencyUnit extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class CurrencyUnit extends React.Component {
     }
 
     componentDidMount() {
-        document.title = "Currency Unit"
+        document.title = pageTitle.currencyUnit
         this.props.getCurrencyUnits()
     }
 

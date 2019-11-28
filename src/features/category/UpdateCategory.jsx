@@ -4,6 +4,7 @@ import { CategoryForm } from './sub-view'
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { getCategory } from 'redux/reducers/category'
+import { pageTitle } from 'constants/index'
 
 class UpdateCategory extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class UpdateCategory extends React.Component {
     }
 
     componentDidMount() {
+        document.title = pageTitle.updateCategory
         const categoryId = this.props.match.params.id
         this.props.getCategory(categoryId)
     }
@@ -18,8 +20,8 @@ class UpdateCategory extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{height: "100vh"}}>
-                    <CategoryForm type="update" data={this.props.category}/>
+                <div className="container" style={{ height: "100vh" }}>
+                    <CategoryForm type="update" data={this.props.category} />
                 </div>
             </MasterLayout>
         )

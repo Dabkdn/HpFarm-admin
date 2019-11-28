@@ -4,6 +4,7 @@ import { FaqForm } from './sub-view'
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { getFaq } from 'redux/reducers/faq'
+import { pageTitle } from 'constants/index'
 
 class UpdateFaq extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class UpdateFaq extends React.Component {
     }
 
     componentDidMount() {
+        document.title = pageTitle.updateFaq
         const faqId = this.props.match.params.id
         this.props.getFaq(faqId)
     }

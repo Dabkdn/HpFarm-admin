@@ -1,8 +1,14 @@
 import React from "react";
 import './_NotFound.scss'
 import { Link } from 'react-router-dom'
+import { pageTitle } from 'constants/index'
 
 export default class NotFound extends React.Component {
+
+    componentDidMount() {
+        document.title = pageTitle.notFound
+    }
+
     render() {
         return (
             <div id="notfound">

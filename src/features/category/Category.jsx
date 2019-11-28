@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { connect } from 'react-redux'
 import { getCategories } from 'redux/reducers/category'
+import { pageTitle } from 'constants/index'
 
 class Category extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Category extends React.Component {
     }
 
     componentDidMount() {
-        document.title = "Category"
+        document.title = pageTitle.category
         this.props.getCategories()
     }
 

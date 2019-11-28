@@ -1,0 +1,69 @@
+@import "public/assets/css/index";
+.login {
+  animation: fadeIn 2s;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #ee7752, #fb7246, #5b80a3, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  &__content {
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 60px;
+    margin: auto;
+    margin-top: 60px;
+    a {
+      text-decoration: none !important;
+      &:hover {
+        color: $color_dark_blue;
+      }
+    }
+    .login-form {
+      width: 100%;
+      h1 {
+        font-size: 48px;
+        color: $color_dark_blue;
+      }
+      label {
+        font-size: 16px;
+        color: $color_dark_blue;
+      }
+      button {
+        background-color: $color_dark_blue;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+      }
+      .forgot {
+        margin: 14px 0;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1135px) {
+  .login {
+    &__content {
+      &__left {
+      }
+      &__right {
+        padding: 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .login {
+    &__content {
+      width: 80%;
+      &__left {
+        display: none;
+      }
+      &__right {
+        padding: 20px 60px;
+        width: 100%;
+      }
+    }
+  }
+}

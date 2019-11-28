@@ -4,6 +4,7 @@ import { CurrencyUnitForm } from './sub-view'
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { getCurrencyUnit } from 'redux/reducers/currencyUnit'
+import { pageTitle } from 'constants/index'
 
 class UpdateCurrencyUnit extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class UpdateCurrencyUnit extends React.Component {
     }
 
     componentDidMount() {
+        document.title = pageTitle.updateCurrencyUnit
         const currencyUnitId = this.props.match.params.id
         this.props.getCurrencyUnit(currencyUnitId)
     }

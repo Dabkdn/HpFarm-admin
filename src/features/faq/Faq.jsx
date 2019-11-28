@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { connect } from 'react-redux'
 import { getFaqs } from 'redux/reducers/faq'
+import { pageTitle } from 'constants/index'
 
 class Faq extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Faq extends React.Component {
     }
 
     componentDidMount() {
-        document.title = "FAQ"
+        document.title = pageTitle.faq
         this.props.getFaqs()
     }
 

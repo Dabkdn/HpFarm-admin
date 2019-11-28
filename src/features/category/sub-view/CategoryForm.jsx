@@ -129,7 +129,7 @@ class CategoryForm extends React.Component {
                         </div>
                     </div>
                     <div className="submit">
-                        <button>Submit</button>
+                        <button className="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
+import { pageTitle } from 'constants/index'
 import { HomeBanner } from './sub-view'
 class Home extends React.Component {
   constructor(props, context) {
@@ -8,7 +9,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Hpfarm-Homepage"
+    document.title = pageTitle.home
   }
 
   render() {

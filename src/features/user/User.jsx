@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { connect } from 'react-redux'
 import { getUsers, updateUser } from 'redux/reducers/user'
+import { pageTitle } from 'constants/index'
 
 class User extends React.Component {
     constructor(props, context) {
@@ -14,7 +15,7 @@ class User extends React.Component {
     }
 
     componentDidMount() {
-        document.title = "User"
+        document.title = pageTitle.user
         this.props.getUsers()
     }
 
@@ -57,7 +58,7 @@ class User extends React.Component {
                     else {
                         return (
                             <div className="status">
-                                <input type="checkbox" name="status" onChange={() => {this.onStatusChange(prop.original._id)}} value={prop.original._id} checked={this.state[prop.original._id]}></input>
+                                <input type="checkbox" name="status" onChange={() => { this.onStatusChange(prop.original._id) }} value={prop.original._id} checked={this.state[prop.original._id]}></input>
                                 <span className="checkmark" onClick={() => { this.onStatusChange(prop.original._id) }}></span>
                             </div>
                         )

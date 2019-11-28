@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { connect } from 'react-redux'
 import { getTokens } from 'redux/reducers/token'
+import { pageTitle } from 'constants/index'
 
 class Token extends React.Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class Token extends React.Component {
     }
 
     componentDidMount() {
+        document.title = pageTitle.token
         this.props.getTokens()
     }
 
@@ -30,18 +32,24 @@ class Token extends React.Component {
     componentWillReceiveProps(nextProps) {
         const data = nextProps.tokens
         data && data.map(item => {
-            const endTime = Date.parse(item.updatedDate) + parseInt(item.period)
+            const endTime = Date.parse(item.updatedDate) + parseInt(item.period) * 1000
             const currentTime = Date.now()
             let distance = parseInt((endTime - currentTime) / 1000)
+            // console.log("update: ", (new Date(Date.parse(item.updatedDate))).toISOString(),
+            //     ' - period: ', parseInt(item.period),
+            //     ' - end: ', (new Date(Date.parse(item.updatedDate) + parseInt(item.period))).toISOString(),
+            //     ' - current: ', (new Date(currentTime)).toISOString(),
+            //     ' - distance: ', distance)
             if (distance > 0) {
-                this.countDown = setInterval(() => {
+                this[item._id] = setInterval(() => {
                     this.setState({
-                        [item._id]: --distance
+                        [item._id]: distance--
                     })
+
+                    if (this.state[item._id] && this.state[item._id] < 0) {
+                        clearInterval(this[item._id])
+                    }
                 }, 1000);
-                if (this.state[item._id] && this.state[item._id] === 0) {
-                    clearInterval(this.countDown)
-                }
             }
         })
     }
@@ -76,7 +84,11 @@ class Token extends React.Component {
                 Header: 'Duration',
                 Cell: prop => {
                     if (this.state[prop.original._id]) {
-                        return <span>{this.formatTime(this.state[prop.original._id])}</span>
+                        let timer = this.state[prop.original._id]
+                        if (timer < 0) {
+                            return <span style={{ color: 'red' }}>expired</span>
+                        }
+                        else return <span>{this.formatTime(timer)}</span>
                     }
                     else return <span style={{ color: 'red' }}>expired</span>
                 }

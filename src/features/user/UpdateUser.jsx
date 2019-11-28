@@ -4,6 +4,7 @@ import { UserForm } from './sub-view'
 import { withRouter } from 'react-router';
 import { MasterLayout } from 'components/layouts'
 import { getUser } from 'redux/reducers/user'
+import { pageTitle } from 'constants/index'
 
 class UpdateUser extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class UpdateUser extends React.Component {
     }
 
     componentDidMount() {
+        document.title = pageTitle.updateUser
         const userId = this.props.match.params.id
         this.props.getUser(userId)
     }
@@ -19,7 +21,7 @@ class UpdateUser extends React.Component {
         return (
             <MasterLayout>
                 <div className="container">
-                    <UserForm type="update" data={this.props.user}/>
+                    <UserForm type="update" data={this.props.user} />
                 </div>
             </MasterLayout>
         )
