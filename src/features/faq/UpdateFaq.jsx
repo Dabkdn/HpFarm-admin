@@ -20,7 +20,7 @@ class UpdateFaq extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{ height: "100vh" }}>
+                <div className="container" >
                     <FaqForm type="update" data={this.props.faq} />
                 </div>
             </MasterLayout>

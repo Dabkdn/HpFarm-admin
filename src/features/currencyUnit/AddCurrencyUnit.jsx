@@ -16,7 +16,7 @@ class AddCurrencyUnit extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{ height: "100vh" }}>
+                <div className="container" >
                     <CurrencyUnitForm type="add" />
                 </div>
             </MasterLayout>

@@ -102,6 +102,8 @@ class MasterLayout extends React.Component {
                     {
                         this.props.children
                     }
+
+                    <div className="spacer"></div>
                     <Footer />
                 </div>
             </div>

@@ -20,7 +20,7 @@ class UpdateCurrencyUnit extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{ height: "100vh" }}>
+                <div className="container" >
                     <CurrencyUnitForm type="update" data={this.props.currencyUnit} />
                 </div>
             </MasterLayout>

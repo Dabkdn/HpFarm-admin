@@ -16,7 +16,7 @@ class AddCategory extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{ height: "100vh" }}>
+                <div className="container" >
                     <CategoryForm type="add" />
                 </div>
             </MasterLayout>

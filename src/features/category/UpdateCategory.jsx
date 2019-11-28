@@ -20,7 +20,7 @@ class UpdateCategory extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{ height: "100vh" }}>
+                <div className="container" >
                     <CategoryForm type="update" data={this.props.category} />
                 </div>
             </MasterLayout>

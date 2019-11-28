@@ -16,7 +16,7 @@ class AddFaq extends React.Component {
     render() {
         return (
             <MasterLayout>
-                <div className="container" style={{ height: "100vh" }}>
+                <div className="container" >
                     <FaqForm type="add" />
                 </div>
             </MasterLayout>
